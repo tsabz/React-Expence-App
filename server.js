@@ -14,6 +14,8 @@ const transactions = require('./routes/transactions')
 // initalize express app
 const app = express();
 
+app.use(express.json());
+
 app.use('/api/v1/transactions', transactions)
 
 app.get('/', (req,res) => res.send('Hello'))
